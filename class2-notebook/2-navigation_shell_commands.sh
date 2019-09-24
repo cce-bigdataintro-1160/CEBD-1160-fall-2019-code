@@ -35,3 +35,5 @@ cd /tmp               # navigates to /tmp directory using absolute path
 # unzip - will list, test, or extract files from a  ZIP  archive
 unzip <file_name>
 
+# history - check all commands issued previously
+history
