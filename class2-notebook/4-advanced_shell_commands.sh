@@ -1,32 +1,39 @@
-### Advanced commands in shell script
+### Gnu Core Tools utilitaries
 
-# Print  the  first  10 lines of each FILE to standard output
+# head - Print  the  first  10 lines of each FILE to standard output
 head filename.txt
-head -n5 filename.txt
+head -n5 filename.txt   # Prints 5 lines instead of 10
 
-# Print  the  last  10  lines of each FILE to standard output.
+# tail - Print  the  last  10  lines of each FILE to standard output.
 tail filename.txt
-tail -n5 filename.txt
+tail -n5 filename.txt   # Prints 5 lines instead of 10
 
-# Print the shape, newline, word, and byte counts for each FILE
+# wc - Print the shape, newline, word, and byte counts for each FILE
 wc filename.txt
-wc -l file.txt
+wc -l file.txt          # Prints only the lines
 
-# Connecting commands using pipe
-head -n5 file.txt | sort
+# sort - sort or merge records (lines) of text
+sort <file_name>
 
-# Filter  adjacent matching lines from INPUT
+# head - Connecting commands using pipe
+head -n5 file.txt | sort # Prints first 5 lines of file and sorts the result
+
+# uniq - Filter  adjacent matching lines from INPUT
 uniq filename.txt
 
-# curl is  a tool to transfer data from or to a server
-curl http://donnees.ville.montreal.qc.ca/dataset/1d785ef8-f883-47b5-bac5-dce1cdddb1b0/resource/e62322fb-3e14-4ee0-b724-a77190dac8e7/download/remorquages.csv
+# curl - curl is  a tool to transfer data from or to a server
+  # See http://donnees.ville.montreal.qc.ca/dataset/remorquages-de-vehicules-genants
+  # List all csv entries
+  curl http://donnees.ville.montreal.qc.ca/dataset/1d785ef8-f883-47b5-bac5-dce1cdddb1b0/resource/e62322fb-3e14-4ee0-b724-a77190dac8e7/download/remorquages.csv
+  # Saves output to a file called : remorquages.csv
+  curl http://donnees.ville.montreal.qc.ca/dataset/1d785ef8-f883-47b5-bac5-dce1cdddb1b0/resource/e62322fb-3e14-4ee0-b724-a77190dac8e7/download/remorquages.csv > remorquages.csv
 
-# Outputting results to a file using > or >>
+# > or >> - Outputting results to a file using > or >>
 cat file1.txt > output.txt   # Always overwrites files
 cat file1.txt >> output.txt  # Always appends to files
 
+# display disk usage statistic
+du -a .
 
-# cut
-
-
-
+# split - splits a file into multiple files of the size provided
+split -l 10 train.csv
