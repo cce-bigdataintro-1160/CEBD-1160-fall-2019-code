@@ -1,14 +1,14 @@
-# git basic commands
+# git remote commands
 
-# Clone an existing git repo
-git clone <repository>
+# clone - Clone an existing git repo
+git clone <repository url>
 
-# Push existing changes to remote repository
+# push - Push existing changes to remote repository
 git push
 
-# Push existing changes to remote repository
+# pull - Push existing changes to remote repository
 git pull
 
-# Check git remotes
+# remote - Check git remotes
 git remote -v
 
