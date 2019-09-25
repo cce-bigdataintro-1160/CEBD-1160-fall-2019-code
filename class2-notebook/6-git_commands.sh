@@ -1,28 +1,17 @@
 # git basic commands
 
-# Create a new git repo
+# init - Initializes a new git repo. Has to be executed from the directory we want to initialize
 git init
 
-# Clone an existing git repo
-git clone <repository>
-
-# Add a new file to an existing git repo at current directory
+# add - Adds an existing file to the staging area of the git repo at current directory
 git add <filename>
 
-# Commit recent changes to git repository
+# commit - Commits all the changes in the staging area to the current git repository
 git commit -m "This is my first commit"
 
-# Push existing changes to remote repository
-git push
-
-# Check git remotes
-git remote -v
-
-# Check status of current branch
+# status - Check status of current branch
 git status
 
-# Create new branch
-git branch -b <new_branch>
-
-# Checkout branch
+# checkout - Checkouts branch
 git checkout <branch_name>
+git checkout master
