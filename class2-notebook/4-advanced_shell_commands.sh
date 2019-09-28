@@ -37,3 +37,8 @@ du -a .
 
 # split - splits a file into multiple files of the size provided
 split -l 10 train.csv
+
+http://localhost:50070/explorer.html#/user
+docker run -it -p 50070:50070 -p 50075:50075 sequenceiq/hadoop-docker:2.7.1 /etc/bootstrap.sh -bash
+/usr/local/hadoop-2.7.1/bin/hdfs dfs -ls /
+/usr/local/hadoop-2.7.1/bin/hdfs dfs -put
