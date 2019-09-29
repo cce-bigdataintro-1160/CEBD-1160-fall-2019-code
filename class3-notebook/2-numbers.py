@@ -1,10 +1,24 @@
-my_number_a = 2
-my_number_b = 2
+# Numbers in Python can be of two types: Integers and Floats
 
-my_number = 4
+# They're very important as many ML algorithms can only deal
+# with numbers and will ignore/crash on any other kind of input
+# because they're based complex math algorithms
 
-times_two = my_number * 2
-square = my_number ** 2
-result = (my_number - times_two) * square
+# Integers have unbound size in Python 3!
+lucky_number = 13
+universe_number = 42
 
-print(result)
+# Floats are numbers that have a decimal point!
+pi = 3.14
+a_third = 0.333
+
+# We can do basic math calculations using the operators / + - * % and **
+times_two = lucky_number * 2
+square = universe_number ** 2
+mod = 2 % 3 # results in the remainder of the division of 2 by 3 (1 in this case)
+
+# In the example below we calculate the area of a circle
+radius = 50
+area_of_circle = pi * (radius ** 2)
+
+print(area_of_circle)
