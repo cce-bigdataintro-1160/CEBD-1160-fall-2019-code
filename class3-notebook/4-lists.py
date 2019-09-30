@@ -1,5 +1,5 @@
 # Lists are very powerful data structures capables of holding multiple values
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numbers = [2, 3, 10, 5, 4, 7, 8, 6, 9, 1]
 print(numbers)
 
 # Lists can be "sliced" just like string, so that we can select parts of it
