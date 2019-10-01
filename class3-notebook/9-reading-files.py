@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-
+# Let's now see how we can read a file using python
 from os.path import isfile
 
 file_path = 'titanic/test.csv'
