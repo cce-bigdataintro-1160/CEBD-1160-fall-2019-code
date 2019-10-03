@@ -8,6 +8,9 @@ print(f'My current working directory is {os.getcwd()}')
 is_file = os.path.isfile('titanic/test.csv')
 print(f'The path titanic/test.csv contains a file: {is_file}')
 
+# This command lists all files that exist inside a directory
+print(os.listdir('titanic'))
+
 # This command created a new directory at the specified path
 os.makedirs('newdir', exist_ok=True)
 
