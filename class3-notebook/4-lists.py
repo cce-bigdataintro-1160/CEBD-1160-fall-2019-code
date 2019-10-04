@@ -16,3 +16,5 @@ print(numbers)
 # Finally we can print all elements in a list one by one using a for-loop to iterate over each item
 for n in numbers:
     print(f'The number is {n}')
+
+# Lists can hold anything, including other lists inside!
