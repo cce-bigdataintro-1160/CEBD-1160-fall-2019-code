@@ -9,12 +9,6 @@ print(numbers[3:8])
 # Just like strings, we can check the length of a list
 print(f'The len method can show the length of your list {len(numbers)}')
 
-# We can also assign new items to a list using the following syntax
-numbers[5] = 'intruder'
-print(numbers)
-
 # Finally we can print all elements in a list one by one using a for-loop to iterate over each item
 for n in numbers:
     print(f'The number is {n}')
-
-# Lists can hold anything, including other lists inside!
