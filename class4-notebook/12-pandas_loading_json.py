@@ -10,10 +10,7 @@ def pretty_print(name, to_print):
     print(f'{to_print}\n\n')
 
 
-# Make sure to install xlrd with pip3!!!
-titanic = pd.read_excel(io='data/titanic/train.xlsx',
-                        sheet_name='Sheet1',
-                        header=0)
+titanic = pd.read_json('data/titanic/train.json')
 
 pretty_print("Titanic dataframe", titanic.to_string())
 pretty_print("Titanic dataframe", titanic.columns)
