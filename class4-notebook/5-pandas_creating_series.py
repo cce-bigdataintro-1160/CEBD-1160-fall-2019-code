@@ -13,29 +13,17 @@ def pretty_print(name, to_print):
 orders = pd.Series(data=[300.50, 60, 123.40, 60, np.nan],
                    index=['Customer 1', 'Customer 2', 'Customer 3', 'Customer 4', 'Customer 5'])
 
-# This is how we can print a Series
-pretty_print("orders", orders.to_string())
+# A few basic functions to printing series
+pretty_print("This is how we can print a Series", orders.to_string())
+pretty_print("This is how we can select the first line only", orders.head(n=1))
 
-# This is how we can select the first line only
-pretty_print("first row of orders", orders.head(n=1))
+# Now we see the functions that can quickly provide insights on a dataset
+pretty_print("This is how we can see the labels of each value", orders.index)
+pretty_print("Pandas can automagically infer the type for a Series by checking all values for us", orders.dtypes)
+pretty_print("Printing the shape of a Series", orders.shape)
+pretty_print("Describing a Series", orders.describe())
 
-# This is how we can see the labels of each value
-pretty_print("orders indexes", orders.index)
-
-# Pandas can automagically infer the type for a Series by checking all values for us
-pretty_print("order types", orders.dtypes)
-
-# Printing the shape of a Series
-pretty_print("orders shape", orders.shape)
-
-# Describing a Series
-pretty_print("orders description with types", orders.describe())
-
-# Sorting all values in a series
-pretty_print("orders sorted values", orders.sort_values())
-
-# Counting occurrences of different values in a series
-pretty_print("orders counts of values", orders.value_counts())
-
-# Checking for null elements in a Series
-pretty_print("orders check for null elements", orders.isnull())
+# A few more advanced methods capable of transforming our series
+pretty_print("Sorting all values in a series", orders.sort_values())
+pretty_print("Counting occurrences of different values in a series", orders.value_counts())
+pretty_print("Checking for null elements in a Series", orders.isnull())
