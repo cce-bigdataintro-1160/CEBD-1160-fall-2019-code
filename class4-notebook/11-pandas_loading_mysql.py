@@ -9,12 +9,11 @@ def pretty_print(name, to_print):
     print(f'{to_print}\n\n')
 
 
+# Creating database connection
 db = MySQLdb.connect(host='localhost', user='root', passwd='root', db='defaultdb')
 
-# create the query
+# Creating a select query and querying database for a dataframe
 query = "select * from users"
-
-# execute the query and assign it to a pandas dataframe
 df = psql.read_sql(query, con=db)
 
 pretty_print("Users dataframe", df.to_string())

@@ -14,7 +14,7 @@ html_tables = pd.read_html('https://www.dividend.com/dividend-stocks/high-divide
 
 pretty_print("High Dividend Stocks", html_tables[0].to_string())
 pretty_print("High Dividend Columns", html_tables[0].columns)
-pretty_print("High Dividend Columns", html_tables[0].info())
-pretty_print("High Dividend Columns", html_tables[0].describe().to_string())
+pretty_print("High Dividend Info", html_tables[0].info())
+pretty_print("High Dividend Description", html_tables[0].describe().to_string())
 
 plt.close()
