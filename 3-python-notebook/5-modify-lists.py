@@ -11,8 +11,8 @@ numbers.append('add me!')
 print(numbers)
 
 # Lists can really hold any type of value, even another list! Try adding other lists to it
-numbers.append([99,98,97])
-numbers.append([103,43,54])
+numbers.append([99, 98, 97])
+numbers.append([103, 43, 54])
 numbers.append('anything')
 numbers.append(True)
 print(numbers)
