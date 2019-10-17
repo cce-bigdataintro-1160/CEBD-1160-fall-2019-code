@@ -7,6 +7,7 @@ def pretty_print(name, to_print):
     print(f'{name}:')
     print(f'{to_print}\n\n')
 
+
 # We're now creating a dataframe straigh from a data file
 titanic = pd.read_csv(filepath_or_buffer='data/titanic/train.csv',
                       sep=',',
@@ -33,4 +34,3 @@ pretty_print("Selecting rows by multiple criteria",
 
 # Extracting DataFrame correlations
 pretty_print("Extracting dataframe correlation matrix", titanic.corr().to_string())
-
