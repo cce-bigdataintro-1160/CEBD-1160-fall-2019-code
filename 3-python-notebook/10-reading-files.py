@@ -1,8 +1,8 @@
-from os.path import isfile
+import os
 
 file_path = 'titanic/test.csv'
 
-if isfile(file_path):
+if os.path.isfile(file_path):
 
     # To read a file using python we'll use the method `open`
     my_file = open(file_path)
