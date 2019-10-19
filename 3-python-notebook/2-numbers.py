@@ -15,7 +15,7 @@ a_third = 0.333
 # We can do basic math calculations using the operators / + - * % and **
 times_two = lucky_number * 2
 square = universe_number ** 2
-mod = 2 % 3 # results in the remainder of the division of 2 by 3 (1 in this case)
+mod = 3 % 2 # results in the remainder of the division of 3 by 2 (1 in this case)
 
 # In the example below we calculate the area of a circle
 radius = 50
