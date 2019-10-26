@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 
 import pandas as pd
-import matplotlib.pyplot as plt
-import os
-
 
 def pretty_print(name, to_print):
     print(f'{name}:')
@@ -17,4 +14,3 @@ pretty_print("High Dividend Columns", html_tables[0].columns)
 pretty_print("High Dividend Info", html_tables[0].info())
 pretty_print("High Dividend Description", html_tables[0].describe().to_string())
 
-plt.close()

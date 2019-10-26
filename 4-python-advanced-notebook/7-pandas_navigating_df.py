@@ -8,7 +8,7 @@ def pretty_print(name, to_print):
     print(f'{to_print}\n\n')
 
 
-# We're now creating a dataframe straigh from a data file
+# We're now creating a dataframe straight from a data file
 titanic = pd.read_csv(filepath_or_buffer='data/titanic/train.csv',
                       sep=',',
                       header=0)
@@ -25,7 +25,7 @@ pretty_print("Summing up two selected columns", titanic['Fare'] + titanic['Age']
 
 # Using functions on specific columns
 pretty_print("Count for each different values of age", titanic['Age'].value_counts())
-pretty_print("Displayting unique values for the Fare Column removing any duplicates", titanic['Fare'].unique())
+pretty_print("Displaying unique values for the Fare Column removing any duplicates", titanic['Fare'].unique())
 
 # Selecting DataFrame Rows by a condition
 pretty_print("Selecting rows by criteria, only people with 30> years of age", titanic[titanic['Age'] > 30])
