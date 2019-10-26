@@ -1,6 +1,7 @@
 import os
+from pathlib import Path
 
-my_desktop='c:/Users/eduardo/Desktop'
+my_desktop=f'{Path.home()}/Desktop'
 
 for item in os.listdir(my_desktop):
     if os.path.isfile(f'{my_desktop}/{item}'):
