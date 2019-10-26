@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
-import pandas as pd
 import matplotlib.pyplot as plt
-import os
+import pandas as pd
 
 
 def pretty_print(name, to_print):
