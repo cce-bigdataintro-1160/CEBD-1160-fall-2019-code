@@ -1,5 +1,3 @@
-from os.path import isfile
-
 file_path = 'file_to_write.txt'
 
 # To write a file using python we'll use the method `open` with the w+ modifier
