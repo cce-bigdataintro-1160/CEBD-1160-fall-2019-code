@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import matplotlib.pyplot as plt
 import pandas as pd
 
 
@@ -16,4 +15,3 @@ df = pd.read_excel(io='data/titanic/train.xlsx',
 
 df.to_csv('data/titanic/created_train.csv')
 
-plt.close()
