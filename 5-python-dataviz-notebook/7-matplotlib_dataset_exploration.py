@@ -16,6 +16,7 @@ os.makedirs('plots/7-matplotlib_dataset_exploration', exist_ok=True)
 for col1_idx, column1 in enumerate(df.columns):
     for col2_idx, column2 in enumerate(df.columns):
         if col1_idx < col2_idx:
+            print(f'Generating {column1} to {column2} plot')
             fig, axes = plt.subplots(1, 1, figsize=(5, 5))
             axes.scatter(df[column1], df[column2], label=f'{column1} to {column2}', color='green', marker='x')
             axes.set_title(f'{column1} to {column2}')
