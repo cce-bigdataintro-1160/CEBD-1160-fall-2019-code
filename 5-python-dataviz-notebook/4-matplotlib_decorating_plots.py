@@ -11,13 +11,16 @@ random = np.random.randint(0, 100, 20)
 
 fig, axes = plt.subplots(2, 1, figsize=(5, 5))
 
-axes[0].plot(linear, label='Linear')
+# In order to decorate plots we can set the title, the x/y label and the ticks
+axes[0].plot(linear, label='Linear Plot Legend')
 axes[0].set_title('Linear Plot')
 axes[0].set_xlabel('Index')
 axes[0].set_xticklabels(['one_x','two_x','three_x','four_x'])
 axes[0].set_yticklabels(['one_y','two_y','three_y','four_y'])
+# The function legend will display a legend box with the contents of the label param
 axes[0].legend()
 
+# Plotting a separate axe for comparison
 axes[1].plot(square)
 
 plt.tight_layout()
