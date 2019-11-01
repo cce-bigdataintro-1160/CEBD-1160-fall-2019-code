@@ -24,7 +24,9 @@ df.drop('id', axis=1, inplace=True)
 
 os.makedirs('plots/9-matplotlib_other_plots', exist_ok=True)
 
-# Histogram
+# All the plots in this section use the breast cancer dataset as base
+
+# Example of creating a Histogram plot
 fig, axes = plt.subplots(1, 1, figsize=(5, 5))
 axes.hist(df['mean symmetry'], bins=30, color='g', label='mean symmetry')
 axes.set_title('Mean Simmetry')
@@ -33,14 +35,14 @@ axes.set_ylabel('Mean Simmetry')
 axes.legend()
 plt.savefig('plots/9-matplotlib_other_plots/cancer_mean_simmetry_hist.png', dpi=300)
 
-# Pie
+# Example of creating a Pie plot
 fig, axes = plt.subplots(1, 1, figsize=(5, 5))
 axes.pie(df['diagnosis'].value_counts(), labels=df['diagnosis'].value_counts().index.tolist())
 axes.set_title('Diagnosis')
 axes.legend()
 plt.savefig('plots/9-matplotlib_other_plots/cancer_diagnosis_pie.png', dpi=300)
 
-# Bar
+# Example of creating a Bar plot
 fig, axes = plt.subplots(1, 1, figsize=(5, 5))
 axes.bar(np.arange(0, len(df['mean symmetry'])), df['mean symmetry'], color='y', label='mean symmetry')
 axes.set_title('Mean Simmetry')
@@ -49,7 +51,7 @@ axes.set_ylabel('Mean Simmetry')
 axes.legend()
 plt.savefig('plots/9-matplotlib_other_plots/cancer_mean_simmetry_bar.png', dpi=300)
 
-# Correlation Heatmap
+# Example of creating a Correlation Heatmap plot
 fig, axes = plt.subplots(1, 1, figsize=(20, 20))
 df['encoded_diagnosis']=df['diagnosis'].map({'B': 0, 'M': 1})
 correlation = df.corr().round(2)
@@ -70,7 +72,7 @@ axes.set_title('Heatmap of Correlation of Dimensions')
 fig.tight_layout()
 plt.savefig('plots/9-matplotlib_other_plots/cancer_correlation_heatmap.png')
 
-# 3D
+# Example of creating a 3D plot
 malign = df[df['diagnosis'] == 'M']
 benign = df[df['diagnosis'] == 'B']
 fig = plt.figure()

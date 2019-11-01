@@ -20,14 +20,14 @@ plt.style.use("ggplot")
 fig, axes = plt.subplots(1, 1, figsize=(5, 5))
 
 # This time we plot multiple plots on the same axes, to get some perspective on their comparisons
-axes.scatter(df['alcohol'], df['total_phenols'], alpha=0.7)
-axes.scatter(df['alcohol'], df['color_intensity'], alpha=0.7)
-# axes.scatter(df['alcohol'], df['malic_acid'], alpha=0.7)
+# The size parameter can be either a fixed value or another columns as in here
+axes.scatter(df['alcohol'], df['malic_acid'], s=(df['color_intensity']) ** 2.5,
+             label=f'Alcohol to Malic Acid', color='orange', marker='o', edgecolors='w', alpha=0.7)
 
-axes.set_xlabel('Alcohol')
-axes.set_ylabel('Total Phenols / Color Intensity')
-axes.set_title(f'Alcohol comparisons')
+axes.set_xlabel(f'Alcohol')
+axes.set_ylabel(f'Malic Acid')
+axes.set_title(f'Alcohol, Malic Acid and Color Intensity (Size)')
+
 axes.legend()
-plt.savefig(f'plots/8-matplotlib_multiple_plot_axes/multiplot_scatter.png', dpi=300)
-
+plt.savefig(f'plots/8-matplotlib_multiple_plot_axes/multiplot_scatter_with_size.png', dpi=300)
 plt.close()

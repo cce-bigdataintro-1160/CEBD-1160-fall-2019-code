@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
-import pandas as pd
-import matplotlib.pyplot as plt
 import os
+
+import matplotlib.pyplot as plt
+import pandas as pd
 
 df = pd.read_csv('data/diabetes.data',
                  sep='\s+',
@@ -10,6 +11,8 @@ df = pd.read_csv('data/diabetes.data',
 
 os.makedirs('plots/7-matplotlib_dataset_exploration', exist_ok=True)
 
+# Another useful dataset exploration technique involves comparing multiple columns of the dataset
+# The enumerate functions will generate pairs of indexes elements
 for col1_idx, column1 in enumerate(df.columns):
     for col2_idx, column2 in enumerate(df.columns):
         if col1_idx < col2_idx:

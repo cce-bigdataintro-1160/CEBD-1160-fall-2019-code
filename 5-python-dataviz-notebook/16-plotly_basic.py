@@ -19,7 +19,7 @@ fig.add_scatter(x=insurance_df['bmi'],
                         'opacity': 0.6,
                         'colorscale': 'Viridis'
                         })
-plot(fig, filename='./plots/plotly-scatter.html', auto_open=False)
+plot(fig, filename='./plots/16-plotly_basic/plotly-scatter.html', auto_open=False)
 
 trace = go.Heatmap(z=insurance_df.corr().round(2),
                    x=insurance_df.columns,
