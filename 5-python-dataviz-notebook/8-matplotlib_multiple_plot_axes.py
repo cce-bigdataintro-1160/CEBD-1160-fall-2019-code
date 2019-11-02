@@ -20,9 +20,9 @@ plt.style.use("ggplot")
 fig, axes = plt.subplots(1, 1, figsize=(5, 5))
 
 # This time we plot multiple plots on the same axes, to get some perspective on their comparisons
-axes.scatter(df['alcohol'], df['total_phenols'], alpha=0.7)
-axes.scatter(df['alcohol'], df['color_intensity'], alpha=0.7)
-# axes.scatter(df['alcohol'], df['malic_acid'], alpha=0.7)
+axes.scatter(df['alcohol'], df['total_phenols'], alpha=0.7, label='Total Phenols')
+axes.scatter(df['alcohol'], df['color_intensity'], alpha=0.7, label='Color Intensity')
+axes.scatter(df['alcohol'], df['malic_acid'], alpha=0.7, label='Malic Acid')
 
 axes.set_xlabel('Alcohol')
 axes.set_ylabel('Total Phenols / Color Intensity')

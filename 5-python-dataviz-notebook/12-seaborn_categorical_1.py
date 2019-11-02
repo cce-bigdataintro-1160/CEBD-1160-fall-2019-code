@@ -8,7 +8,7 @@ import seaborn as sns
 
 df = pd.read_csv('data/breast-cancer/wdbc.data',
                  sep=',',
-                 header=0)
+                 header=None)
 
 df.columns = ['id', 'diagnosis', 'mean radius', 'mean texture', 'mean perimeter', 'mean area',
               'mean smoothness', 'mean compactness', 'mean concavity',

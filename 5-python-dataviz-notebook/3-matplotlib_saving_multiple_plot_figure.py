@@ -28,7 +28,7 @@ os.makedirs('plots/3-matplotlib_saving_multiple_plot_figure', exist_ok=True)
 
 # We can save figures using savefig
 plt.savefig('plots/3-matplotlib_saving_multiple_plot_figure/plot.png', dpi=300)
-plt.savefig('plots/3-matplotlib_saving_multiple_plot_figure/plot.jpg', dpi=300)
+plt.savefig('plots/3-matplotlib_saving_multiple_plot_figure/plot.svg', dpi=300)
 plt.savefig('plots/3-matplotlib_saving_multiple_plot_figure/plot.pdf', dpi=300)
 
 plt.close()
