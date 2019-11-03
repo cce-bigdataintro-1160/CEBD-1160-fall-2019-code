@@ -27,23 +27,6 @@ y = wine.target
 print(f'sklearn dataset X shape: {X.shape}')
 print(f'sklearn dataset y shape: {y.shape}')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # What's inside this sklearn loaded dataset
 print(f'keys: {wine.keys()}')
 print(f'data: {wine.data}')
