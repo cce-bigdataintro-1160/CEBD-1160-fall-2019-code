@@ -7,7 +7,7 @@ import seaborn as sns
 
 df = pd.read_csv('data/iris/iris-encoded.data',
                  sep=',',
-                 header=0)
+                 header=None)
 
 df.columns = ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)', 'class']
 

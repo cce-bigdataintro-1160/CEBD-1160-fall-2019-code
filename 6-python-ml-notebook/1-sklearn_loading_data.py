@@ -4,7 +4,7 @@ import numpy as np
 # Loading data using our pandas DataFrames (as in all previous classes)
 wine_df = pd.read_csv('data/wine.data',
                       sep=',',
-                      header=0)
+                      header=None)
 wine_df.columns = ['class', 'alcohol', 'malic_acid', 'ash', 'alcalinity_of_ash', 'magnesium', 'total_phenols',
                    'flavanoids',
                    'nonflavanoid_phenols', 'proanthocyanins', 'color_intensity', 'hue', 'od280 od315_of_diluted_wines',

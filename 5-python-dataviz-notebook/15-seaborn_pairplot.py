@@ -31,7 +31,7 @@ plt.clf()
 # Cancer Pairplot
 cancer_df = pd.read_csv('data/breast-cancer/wdbc.data',
                         sep=',',
-                        header=0)
+                        header=None)
 cancer_df.columns = ['id', 'diagnosis', 'mean radius', 'mean texture', 'mean perimeter', 'mean area',
                      'mean smoothness', 'mean compactness', 'mean concavity',
                      'mean concave points', 'mean symmetry', 'mean fractal dimension',
@@ -50,7 +50,7 @@ plt.clf()
 #Iris Pairplot
 iris_df = pd.read_csv('data/iris/iris-encoded.data',
                       sep=',',
-                      header=0)
+                      header=None)
 iris_df.columns = ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)', 'class']
 sns.pairplot(iris_df, hue='class', diag_kind='hist')
 plt.savefig('plots/15-seaborn_pairplot/iris_pairplot.png')
@@ -60,7 +60,7 @@ plt.clf()
 # Wine Pairplot
 wine_df = pd.read_csv('data/wine.data',
                       sep=',',
-                      header=0)
+                      header=None)
 wine_df.columns = ['class', 'alcohol', 'malic_acid', 'ash', 'alcalinity_of_ash', 'magnesium', 'total_phenols',
                    'flavanoids',
                    'nonflavanoid_phenols', 'proanthocyanins', 'color_intensity', 'hue', 'od280 od315_of_diluted_wines',
