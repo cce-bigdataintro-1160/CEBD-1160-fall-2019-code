@@ -37,7 +37,7 @@ plt.savefig('plots/9-matplotlib_other_plots/cancer_mean_simmetry_hist.png', dpi=
 
 # Example of creating a Pie plot
 fig, axes = plt.subplots(1, 1, figsize=(5, 5))
-axes.pie(df['diagnosis'].value_counts(), labels=df['diagnosis'].value_counts().index.tolist())
+axes.pie(df['diagnosis'].value_counts(), labels=df['diagnosis'].value_counts().index.tolist(), autopct='%1.1f%%')
 axes.set_title('Diagnosis')
 axes.legend()
 plt.savefig('plots/9-matplotlib_other_plots/cancer_diagnosis_pie.png', dpi=300)
