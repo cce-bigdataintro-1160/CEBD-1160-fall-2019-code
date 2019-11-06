@@ -1,8 +1,6 @@
-import numpy as np
-from sklearn.datasets import load_diabetes
-from sklearn.linear_model import LinearRegression
 import matplotlib
 import statsmodels.api as sm
+from sklearn.datasets import load_diabetes
 
 matplotlib.rcParams.update({'font.size': 12})
 

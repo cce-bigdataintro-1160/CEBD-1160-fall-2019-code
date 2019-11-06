@@ -26,13 +26,14 @@ for (real, predicted) in list(zip(y_test, predicted_values)):
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set(palette="inferno")
-residuals = y_test - predicted_values
 
 sns.scatterplot(y_test, predicted_values)
 plt.plot([0, 50], [0, 50], '--')
 plt.xlabel('Real Value')
 plt.ylabel('Predicted Value')
 plt.show()
+
+residuals = y_test - predicted_values
 
 sns.scatterplot(y_test, residuals)
 plt.plot([50, 0], [0, 0], '--')
