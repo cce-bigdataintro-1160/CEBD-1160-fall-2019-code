@@ -22,19 +22,20 @@ predicted_values = lm.predict(X_test)
 for (real, predicted) in list(zip(y_test, predicted_values)):
     print(f"Value: {real:.2f}, pred: {predicted:.2f}, diff: {(real - predicted):.2f}")
 
-# Plotting the residuals: difference between real and predicted
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set(palette="inferno")
 
+# Plotting differenct between real and predicted values
 sns.scatterplot(y_test, predicted_values)
 plt.plot([0, 50], [0, 50], '--')
 plt.xlabel('Real Value')
 plt.ylabel('Predicted Value')
 plt.show()
 
+# Plotting the residuals: the error between the real and predicted values
 residuals = y_test - predicted_values
-
 sns.scatterplot(y_test, residuals)
 plt.plot([50, 0], [0, 0], '--')
 plt.xlabel('Real Value')
