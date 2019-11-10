@@ -1,3 +1,0 @@
-FROM cloudera/quickstart:latest
-
-
