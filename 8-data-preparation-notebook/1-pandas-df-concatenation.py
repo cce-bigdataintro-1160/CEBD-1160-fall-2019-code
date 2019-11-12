@@ -6,6 +6,7 @@ print(len(spotify))
 # print(spotify.info())
 # print(spotify.head(5).to_string())
 # print(spotify.describe().to_string())
+# print(spotify[spotify['danceability'] > 0.9].to_string())
 
 # Splitting the original dataframe in two
 df1 = spotify.iloc[:50, :]
