@@ -21,6 +21,11 @@ titanic = pd.concat([titanic, encoded_sex, encoded_embarked], axis=1)
 # Transforming the Cabin field information in numerical information
 titanic['MarkedCabin'] = titanic['Cabin'].apply(lambda x: 0 if type(x) != str else 1)
 
+# Extracting title from passenger name
+titanic['IsMaster'] = titanic['Name'].apply(lambda name: 1 if 'master.' in name.lower() else 0)
+titanic['IsReverend'] = titanic['Name'].apply(lambda name: 1 if 'rev.' in name.lower() else 0)
+titanic['IsDoctor'] = titanic['Name'].apply(lambda name: 1 if 'dr.' in name.lower() else 0)
+
 # Removing non numerical and 'noise' columns
 titanic.drop(['PassengerId', 'Sex', 'Embarked', 'Name', 'Ticket', 'Cabin'], axis=1, inplace=True)
 
@@ -33,7 +38,7 @@ plt.savefig('titanic_clean.png')
 X = titanic.drop('Survived', axis=1)
 y = titanic['Survived']
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.40)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.40, random_state=101)
 
 from sklearn.linear_model import LogisticRegression
 lr = LogisticRegression()
