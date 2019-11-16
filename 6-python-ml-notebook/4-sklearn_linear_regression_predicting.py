@@ -52,3 +52,4 @@ from sklearn import metrics
 print(f"Printing MAE error(avg abs residual): {metrics.mean_absolute_error(y_test, predicted_values)}")
 print(f"Printing MSE error: {metrics.mean_squared_error(y_test, predicted_values)}")
 print(f"Printing RMSE error: {np.sqrt(metrics.mean_squared_error(y_test, predicted_values))}")
+print(f"R2 Score: {metrics.r2_score(y_test, predicted_values)}")
