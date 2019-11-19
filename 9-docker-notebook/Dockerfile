@@ -8,8 +8,8 @@ RUN pip3 install numpy pandas matplotlib seaborn plotly sklearn
 
 WORKDIR /app
 
-COPY full-example.py /app
+COPY short-lived-full-example.py /app
 COPY data/titanic/* /app
 
-CMD ["python3","-u","./full-example.py"]
+CMD ["python3","-u","./short-lived-full-example.py"]
 
