@@ -1,8 +1,15 @@
 FROM ubuntu:latest
 
-RUN apt-get update
-RUN apt-get -y install python3
+RUN apt-get update \
+    && apt-get install -y python3-pip \
+    && pip3 install --upgrade pip
 
-COPY stock_price.py .
+RUN pip3 install numpy pandas matplotlib seaborn plotly sklearn
 
-CMD ["python3","-u","stock_price.py"]
+WORKDIR /app
+
+COPY full-example.py /app
+COPY data/titanic/* /app
+
+CMD ["python3","-u","./full-example.py"]
+
