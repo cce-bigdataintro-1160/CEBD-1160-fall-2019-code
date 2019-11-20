@@ -29,11 +29,6 @@ titanic['IsDoctor'] = titanic['Name'].apply(lambda name: 1 if 'dr.' in name.lowe
 # Removing non numerical and 'noise' columns
 titanic.drop(['PassengerId', 'Sex', 'Embarked', 'Name', 'Ticket', 'Cabin'], axis=1, inplace=True)
 
-# Prepared dataset overall plotting
-plt.figure(figsize=(8, 8))
-sns.pairplot(titanic, diag_kind='hist', hue='Survived')
-plt.savefig('titanic_clean.png')
-
 # Applying ML Model
 X = titanic.drop('Survived', axis=1)
 y = titanic['Survived']
