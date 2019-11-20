@@ -15,9 +15,15 @@ docker ps -a
 docker run hello-world
 docker run ubuntu
 docker run postgres
-docker run -p80:80 nginx
+docker run -d -p 80:80 nginx
 docker run -ti ubuntu bash
-docker run -ti -rm --name my_container hello-world
+docker run -rm --name my_container hello-world
+
+# Show the logs of a running docker container
+docker logs <container_id>
+
+# Stops a running container
+docker stop <container_id>
 
 # Removing docker containers
 docker rm <container_id>
