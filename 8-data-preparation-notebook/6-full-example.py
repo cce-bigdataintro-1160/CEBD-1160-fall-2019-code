@@ -7,7 +7,6 @@ from sklearn.model_selection import train_test_split
 np.warnings.filterwarnings('ignore')
 
 titanic = pd.read_csv('data/titanic/train.csv')
-test = pd.read_csv('data/titanic/test.csv')
 
 # Filling up the missing data with the most common values
 titanic['Age'] = titanic['Age'].fillna(value=titanic['Age'].mean())
