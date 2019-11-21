@@ -14,10 +14,11 @@ docker ps -a
 # Running Docker containers
 docker run hello-world
 docker run ubuntu
-docker run postgres
 docker run -d -p 80:80 nginx
 docker run -ti ubuntu bash
 docker run -rm --name my_container hello-world
+docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 
 # Show the logs of a running docker container
 docker logs <container_id>
