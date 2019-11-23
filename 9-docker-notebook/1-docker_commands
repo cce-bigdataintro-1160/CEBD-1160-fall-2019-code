@@ -16,9 +16,8 @@ docker run hello-world
 docker run ubuntu
 docker run -d -p 80:80 nginx
 docker run -ti ubuntu bash
-docker run -rm --name my_container hello-world
-docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
-docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+docker run --rm --name my_container hello-world
+docker run -ti --rm --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql
 
 # Show the logs of a running docker container
 docker logs <container_id>
@@ -40,5 +39,4 @@ docker exec -ti <container_id> bash
 
 # Build a new docker image from an existing Dockerfile
 docker build -t <image_name>:<tag> .
-
-
+docker build -t <image_name>:<tag> .
