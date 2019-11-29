@@ -1,7 +1,24 @@
 import random
 import time
 
-presenters = []
+presenters = [
+'CRISTIAN NITU',
+'Hakim Tamgalt',
+'Hurryramsingh Hurchand',
+'Jonathan Costiniano Galindez',
+'Jun Liu',
+'Katayoun Baharvandfard',
+'Lucia Christina Di Sclafani',
+'Samer Kareshe',
+'Sebastien Church',
+'Shiva Elhamian',
+'Stephane Ngo',
+'Thiago Marques Ferreira Crespo',
+'Thioro Sarr Faty',
+'Vasanth Sadasivan',
+'Yifan Wu',
+'Zachary Zemokhol'
+]
 
 cheer = [
     'Good Luck!!!',
